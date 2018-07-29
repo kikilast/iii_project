@@ -1,43 +1,43 @@
-# KAFKA
-°²³]§Ú¦³¤T¥xVM
-¥Dµ{¦¡
-°T®§±À°eºİ
-°T®§±µ¦¬ºİ
+ï»¿# KAFKA
+å‡è¨­æˆ‘æœ‰ä¸‰å°VM
+ä¸»ç¨‹å¼
+è¨Šæ¯æ¨é€ç«¯
+è¨Šæ¯æ¥æ”¶ç«¯
 
-1. Àô¹Ò³]©w
-¦³¥i¯à¾É­Pµ{¦¡µLªk¶}±Òªº­ì¦]¦³³\¦h¡A¨Ò¦p:port³Q¨ä¥LªA°È¦û¦í¡B¨¾¤õÀğ³]©w¡B°O¾ĞÅé¤£°÷¡B¨S¸ËJava¡Kµ¥µ¥(¼È®É¥u¦³·Q¨ì³o¨Ç¡AÁÙ¦³¨ä¥Lªº¥i¥H¸ò§Ú°Q½×¤@¤U)
-   a. ¨ä¥LªA°È¦û¦íkafkaªºport
-      kafka¹w³]port¬O¨Ï¥Î9092¡A½T»{­n¨Ï¥Îªºport¦³¨S¦³³Q¨ä¥LªA°È©Ò¥e¥Î
+1. ç’°å¢ƒè¨­å®š
+æœ‰å¯èƒ½å°è‡´ç¨‹å¼ç„¡æ³•é–‹å•Ÿçš„åŸå› æœ‰è¨±å¤šï¼Œä¾‹å¦‚:portè¢«å…¶ä»–æœå‹™ä½”ä½ã€é˜²ç«ç‰†è¨­å®šã€è¨˜æ†¶é«”ä¸å¤ ã€æ²’è£Javaâ€¦ç­‰ç­‰(æš«æ™‚åªæœ‰æƒ³åˆ°é€™äº›ï¼Œé‚„æœ‰å…¶ä»–çš„å¯ä»¥è·Ÿæˆ‘è¨è«–ä¸€ä¸‹)
+   a. å…¶ä»–æœå‹™ä½”ä½kafkaçš„port
+      kafkaé è¨­portæ˜¯ä½¿ç”¨9092ï¼Œç¢ºèªè¦ä½¿ç”¨çš„portæœ‰æ²’æœ‰è¢«å…¶ä»–æœå‹™æ‰€å ç”¨
       ```
       netstat -ntpl | grep 9092
       ```
-   b. ¨¾¤õÀğ
-      ³]©wkafka server host¤Wªº¨¾¤õÀğ
+   b. é˜²ç«ç‰†
+      è¨­å®škafka server hostä¸Šçš„é˜²ç«ç‰†
       ```
       allow in 9092 port
       ```
-      ref: [Ubuntu ¥Î ufw «ü¥O§Ö³t±Ò¥Î©M³]©w¨¾¤õÀğ](https://www.arthurtoday.com/2013/12/ubuntu-ufw-add-firewall-rules.html)
+      ref: [Ubuntu ç”¨ ufw æŒ‡ä»¤å¿«é€Ÿå•Ÿç”¨å’Œè¨­å®šé˜²ç«ç‰†](https://www.arthurtoday.com/2013/12/ubuntu-ufw-add-firewall-rules.html)
 
-2. ¤U¸ükafka
-¤U¸ü.tarÀÉ(©Î¬O¥Îdocker-compose)
+2. ä¸‹è¼‰kafka
+ä¸‹è¼‰.taræª”(æˆ–æ˜¯ç”¨docker-compose)
 ```
 wget http://ftp.tc.edu.tw/pub/Apache/kafka/1.1.0/kafka_2.11-1.1.0.tgz
 ```
-¸ÑÀ£ÁY³o­Ó.tar·|¥X²{¤@­Ó¸ê®Æ§¨¡A±Ò°Êªºµ{¦¡©ñ¦bbin¸ê®Æ§¨¸Ì­±¡A¦Ó¶}±Òµ{¦¡ªº¬ÛÃö°Ñ¼Æ³]©w«h¬O©ñ¦bconfig¸ê®Æ§¨¸Ì­±
+è§£å£“ç¸®é€™å€‹.taræœƒå‡ºç¾ä¸€å€‹è³‡æ–™å¤¾ï¼Œå•Ÿå‹•çš„ç¨‹å¼æ”¾åœ¨binè³‡æ–™å¤¾è£¡é¢ï¼Œè€Œé–‹å•Ÿç¨‹å¼çš„ç›¸é—œåƒæ•¸è¨­å®šå‰‡æ˜¯æ”¾åœ¨configè³‡æ–™å¤¾è£¡é¢
 
-3. ³]©w°Ñ¼Æ
-³oÃäªº°Ñ¼ÆÀÉ¦³¨â­ÓÀÉ®×¤ñ¸û¬ÛÃö¡Aconfig/zookeeper.propertiesÁÙ¦³config/server.properties
+3. è¨­å®šåƒæ•¸
+é€™é‚Šçš„åƒæ•¸æª”æœ‰å…©å€‹æª”æ¡ˆæ¯”è¼ƒç›¸é—œï¼Œconfig/zookeeper.propertiesé‚„æœ‰config/server.properties
    a. Zookeeper.properties:
-      ¦pªGkafka¥u¬[¤@¥x¡A¦bzookeeper.properties¤¤¡A¹w³]ªº¬O¥i¥Hª½±µ¨Ï¥Î¡A¤£¥Î­×§ïªº¡C¦pªGkafka¬O­n¬[¦h¥x(´N¬OÂO¶°°Õ)¡A¦bdataDir­n³]©w¤£¦Pªº¦ì¸m¨Ó¦s¨ú§Ö·Ó¡AªA°Èªºport¤]­n¦³©Ò°Ï¹j¡A¤£¯à¦û¥Î¦P¤@­Óport(¹Ï1)
+      å¦‚æœkafkaåªæ¶ä¸€å°ï¼Œåœ¨zookeeper.propertiesä¸­ï¼Œé è¨­çš„æ˜¯å¯ä»¥ç›´æ¥ä½¿ç”¨ï¼Œä¸ç”¨ä¿®æ”¹çš„ã€‚å¦‚æœkafkaæ˜¯è¦æ¶å¤šå°(å°±æ˜¯å¢é›†å•¦)ï¼Œåœ¨dataDirè¦è¨­å®šä¸åŒçš„ä½ç½®ä¾†å­˜å–å¿«ç…§ï¼Œæœå‹™çš„portä¹Ÿè¦æœ‰æ‰€å€éš”ï¼Œä¸èƒ½ä½”ç”¨åŒä¸€å€‹port(åœ–1)
 
    b. Server.properties:
-      ³o­ÓÀÉ®×¥i¥H³]©wªºªF¦è¤ñ¸û¦h¡A§Ú¥H¤jªô¦Ñ®v³Ì«á¤@°ó½Òªº³]©w¨ÓÁ|¨Ò¡A. broker.id(¹Ï2)³]©wbrokerªº¼Æ¥Ø¡A¨C­Óbroker³£¦³­Ó§Oªºid¡A¦Ó¤£¦Pªºbroker.id¤]­n¹ïÀ³¨ì¤£¦Pªºport
+      é€™å€‹æª”æ¡ˆå¯ä»¥è¨­å®šçš„æ±è¥¿æ¯”è¼ƒå¤šï¼Œæˆ‘ä»¥å¤§é‚±è€å¸«æœ€å¾Œä¸€å ‚èª²çš„è¨­å®šä¾†èˆ‰ä¾‹ï¼Œ. broker.id(åœ–2)è¨­å®šbrokerçš„æ•¸ç›®ï¼Œæ¯å€‹brokeréƒ½æœ‰å€‹åˆ¥çš„idï¼Œè€Œä¸åŒçš„broker.idä¹Ÿè¦å°æ‡‰åˆ°ä¸åŒçš„port
 
-¥ı¶}±Òzookeeper¦A¶}±Òkafka¡A­ì¦]¬OkafkaÂO¶°¬O¥Ñzookeeper¨Ó´x±±¡A©Ò¦³kafkaªºmetadata³£¦s¦bzookeeper)
+å…ˆé–‹å•Ÿzookeeperå†é–‹å•Ÿkafkaï¼ŒåŸå› æ˜¯kafkaå¢é›†æ˜¯ç”±zookeeperä¾†æŒæ§ï¼Œæ‰€æœ‰kafkaçš„metadataéƒ½å­˜åœ¨zookeeper)
 
 ```
-bin/zookeeper-server-start.sh config/zookeeper.properties(¶}±Òzookeeper)
+bin/zookeeper-server-start.sh config/zookeeper.properties(é–‹å•Ÿzookeeper)
 ```
 ```
-bin/kafka-server-start.sh config/server.properties(¶}±Òkafka)
+bin/kafka-server-start.sh config/server.properties(é–‹å•Ÿkafka)
 ```
